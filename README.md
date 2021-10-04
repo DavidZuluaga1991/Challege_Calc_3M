@@ -1,27 +1,21 @@
-# ChallengeCalc
+# Challenge Calc 3M
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+## Main picture
+<img src="/src/assets/images/principal.png" alt="My cool logo"/>
 
-## Development server
+## Changes position
+<img src="/src/assets/images/Changes position.png" alt="Changes position"/>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Random NumPad
+<img src="/src/assets/images/Random NumPad.png" alt="Random NumPad"/>
 
-## Code scaffolding
+## RTL History
+<img src="/src/assets/images/RTL History.png" alt="RTL History"/>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Create with
+ - Angular 12
+ - scss
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Execute project
+  - npm install
+  - npm start
