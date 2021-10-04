@@ -22,9 +22,9 @@
       </div>
     </div>
     <div class="challenger_calc__container__actions">
-      <button (click)='changesPosition.view= !changesPosition.view'>Changes position</button>
-      <button (click)='dataRandom()'>Random NumPad</button>
-      <button (click)='changesPosition.history = !changesPosition.history'>RTL History</button>
+      <button (click)='changesPosition.view= !changesPosition.view' class="{{ changesPosition.view ? 'active' : '' }}">Changes position</button>
+      <button (click)='dataRandom()' class="{{ changesPosition.random ? 'active' : '' }}">Random NumPad</button>
+      <button (click)='changesPosition.history = !changesPosition.history' class="{{ changesPosition.history ? 'active' : '' }}">RTL History</button>
     </div>
   </div>
 </div>

@@ -153,7 +153,9 @@ $c10: #000000;
         cursor: pointer;
         color: $c1;
         font-weight: 600;
+        outline: none;
         // box-shadow: 0 0 2px 1px rgba($c10, 0.6);
+        &.active,
         &:hover {
           background-color: $c3;
           transform: scale(1.15);

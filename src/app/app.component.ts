@@ -32,9 +32,9 @@ export class AppComponent {
     }
   }
   public enter(btn: boolean, event?: any) {
-    console.log(event);
     if (btn) {
       const input = this.formGroup.get('input')?.value;
+      console.log(eval(input));
       this.data.push({ text: input, total: eval(input) });
       this.formGroup.get('input')?.setValue('');
     } else {
@@ -75,7 +75,7 @@ export class AppComponent {
   }
 
   public clickBtn(text: string, event: any) {
-    console.log(event.keyCode, event.which);
+    // console.log(event.keyCode, event.which);
     // const char = String.fromCharCode(event.which);
     const text2 = this.formGroup.get('input')?.value;
     const pattern = new RegExp('[/*+-]');
