@@ -1,0 +1,188 @@
+
+$c1: #12232E;
+$c2: #007CC7;
+$c3: #4DA8DA;
+$c4: #203647;
+$c5: #EEFBFB;
+$c6: #FFFFFF;
+$c7: #0e813c;
+$c8: #e62e1e;
+$c9: #cfcf7c;
+$c10: #000000;
+
+.challenger_calc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $c3;
+  &__container {
+    box-shadow: 0 2px 8px rgba($c1, 0.7);
+    background-color: $c6;
+    border-radius: 8px;
+    padding: 10px;
+    animation-duration: 2s;
+    animation-name: init;
+    animation-iteration-count: inherit;
+    &__history {
+      display: grid;
+      grid-template-columns: 230px 340px;
+      gap: 10px;
+      &.position {
+        grid-template-columns: 340px 230px;
+        .calc {
+          grid-column: 2/3;
+        }
+        .history {
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+      }
+      .calc {
+        display: grid;
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(5, 50px);
+        gap: 10px;
+        input {
+          outline: none;
+          padding-left: 10px;
+          padding-right: 10px;
+          grid-column: 1 / 5;
+        }
+        button {
+          background-color: $c2;
+          color: $c6;
+          border: 0;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: 600;
+          &:hover {
+            background-color: $c3;
+            transform: scale(1.1);
+          }
+        }
+      }
+      .history {
+        text-align: end;
+        width: 340px;
+        &.left {
+          text-align: left;
+        }
+        &__label {
+          color: $c4;
+          font-size: 12px;
+          font-weight: 600;
+          padding-right: 10px;
+        }
+        &__content {
+          height: 230px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border: 1px solid $c4;
+          border-radius: 4px;
+          background-color: $c5;
+          &::-webkit-scrollbar {
+            width: 8px; /* Tamaño del scroll en vertical */
+            height: 8px; /* Tamaño del scroll en horizontal */
+          }
+          &::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+          }
+
+          /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: #b3b3b3;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+          }
+
+          /* Cambiamos el fondo cuando esté en active */
+          &::-webkit-scrollbar-thumb:active {
+            background-color: #999999;
+          }
+          &__item {
+            height: 40px;
+            padding-top: 10px;
+            cursor: pointer;
+            animation-duration: 1s;
+            animation-name: slidein;
+            animation-iteration-count: inherit;
+            margin-bottom: 5px;
+            &:hover {
+              background-color: $c6;
+              border-radius: 4px;
+              box-shadow: 0 0 2px 1px rgba($c1, 0.2);
+            }
+            p {
+              margin: 0;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+            .action {
+              color: $c4;
+              font-size: 10px;
+              font-weight: 600;
+            }
+            .total {
+              color: $c2;
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    &__actions {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(3, auto);
+      gap: 15px;
+      margin-top: 10px;
+      button {
+        background-color: $c6;
+        border: 1px solid $c4;
+        border-radius: 4px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+        color: $c1;
+        font-weight: 600;
+        // box-shadow: 0 0 2px 1px rgba($c10, 0.6);
+        &:hover {
+          background-color: $c3;
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+    background-color: $c6;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%;
+    background-color: $c5;
+  }
+}
+
+
+
+@keyframes init {
+  0% {
+    transform: scale(.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
